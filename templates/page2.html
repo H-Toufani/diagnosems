@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewprt" content="width=device-width, initial-scale=1.0">
+    <title> Diagnose MS Application</title>
+</head>
+<body>
+    <h1> Please enter the results of your Physical Tests</h1>
+    
+    <form method="post", action="{% url 'page2' %}">
+        <p>1. Pyramidal (motor function)?</p>
+        <input type="radio" id="Normal" name="Pyramidal" value='0' required>
+        <label for="Normal">Normal function</label><br>
+        <input type="radio" id="Moderate" name="Pyramidal" value='1'>
+        <label for="Moderate">Moderate impairment</label><br>
+        <input type="radio" id="Severe" name="Pyramidal" value='1'>
+        <label for="Severe">Severe impairment</label><br>
+      
+        <p>2. Cerebellar (coordination and balance)?</p>
+        <input type="radio" id="Normal" name="Cerebellar" value='0' required>
+        <label for="Normal">Normal function</label><br>
+        <input type="radio" id="Moderate" name="Cerebellar" value='1'>
+        <label for="Moderate">Moderate impairment</label><br>
+        <input type="radio" id="Severe" name="Cerebellar" value='1'>
+        <label for="Severe">Severe impairment</label><br>
+
+        <p>3. Brainstem (eye movements, facial sensation, hearing, swallowing)?</p>
+        <input type="radio" id="Normal" name="Brainstem" value='0' required>
+        <label for="Normal">Normal function</label><br>
+        <input type="radio" id="Moderate" name="Brainstem" value='1'>
+        <label for="Moderate">Moderate impairment</label><br>
+        <input type="radio" id="Severe" name="Brainstem" value='1'>
+        <label for="Severe">Severe impairment</label><br>
+
+        <p>4. Sensory (touch, pain, temperature)?</p>
+        <input type="radio" id="Normal" name="Sensory" value='0' required>
+        <label for="Normal">Normal function</label><br>
+        <input type="radio" id="Moderate" name="Sensory" value='1'>
+        <label for="Moderate">Moderate impairment</label><br>
+        <input type="radio" id="Severe" name="Sensory" value='1'>
+        <label for="Severe">Severe impairment</label><br>
+
+        <p>5. Bowel and bladder function?</p>
+        <input type="radio" id="Normal" name="Bowel" value='0' required>
+        <label for="Normal">Normal function</label><br>
+        <input type="radio" id="Moderate" name="Bowel" value='1'>
+        <label for="Moderate">Moderate impairment</label><br>
+        <input type="radio" id="Severe" name="Bowel" value='1'>
+        <label for="Severe">Severe impairment</label><br>
+
+        <p>6. Visual function?</p>
+        <input type="radio" id="Normal" name="Visual" value='0' required>
+        <label for="Normal">Normal function</label><br>
+        <input type="radio" id="Moderate" name="Visual" value='1'>
+        <label for="Moderate">Moderate impairment</label><br>
+        <input type="radio" id="Severe" name="Visual" value='1'>
+        <label for="Severe">Severe impairment</label><br>
+
+        <p>7. Mental function?</p>
+        <input type="radio" id="Normal" name="Mental" value='0' required>
+        <label for="Normal">Normal function</label><br>
+        <input type="radio" id="Moderate" name="Mental" value='1'>
+        <label for="Moderate">Moderate impairment</label><br>
+        <input type="radio" id="Severe" name="Mental" value='1'>
+        <label for="Severe">Severe impairment</label><br>
+
+        <p>8. Do you have difficulty walking? Do you require assistance, such as a walker?</p>
+        <input type="radio" id="Normal" name="walk" value='0' required>
+        <label for="Normal">No</label><br>
+        <input type="radio" id="Moderate" name="walk" value='1'>
+        <label for="Moderate">Yes</label><br>
+        <button type="submit">Submit</button>
+      </form>     
+
+    </form>     
+
+      <form>
+        <h1>Result</h1>
+        <h1> {{Suggestion}}</h1>
+
+      </form>   
+</body>
+</html>

@@ -1,0 +1,1 @@
+web gunicorn DiagnoseMS.wsgi:application --log-file - 
