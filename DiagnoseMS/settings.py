@@ -131,3 +131,15 @@ DEFAULT_AUTO_FIELD = 'https://docs.djangoproject.com/en/4.1/ref/settings/#defaul
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+# settings.py
+
+# ...
+
+if 'DYNO' in os.environ:
+    # We're on Heroku, use the Heroku-specific WhiteNoise storage
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+else:
+    # We're not on Heroku, use the default Django storage
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
