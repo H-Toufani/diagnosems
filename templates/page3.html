@@ -28,32 +28,32 @@
             <input type="number" name="Number" required><br></p>
         
         <p>2. Identify the location of the lesions in your brain MRI image using the image below.<br></p>
-        <h1>
+        
         <input type="checkbox" name="one" id="one" value="yes">
-        <label for="one">1</label>
+        <label for="one">Cerebrum</label>
+        <br><br>
         <input type="checkbox" name="two" id="two" value="yes">
-        <label for="two">2</label>
+        <label for="two">Cerebellum</label>
+        <br><br>
         <input type="checkbox" name="three" id="three" value="yes">
-        <label for="three">3</label>
+        <label for="three">Brainstem</label>
+        <br><br>
         <input type="checkbox" name="four" id="four" value="yes">
-        <label for="four">4</label>
-        <input type="checkbox" name="five" id="five" value="yes">
-        <label for="five">5</label><br>
-        <input type="checkbox" name="six" id="six" value="yes">
-        <label for="six">6</label>
-        <input type="checkbox" name="seven" id="seven" value="yes">
-        <label for="seven">7</label>
-        <input type="checkbox" name="eight" id="eight" value="yes">
-        <label for="eight">8</label>
-        <input type="checkbox" name="nine" id="nine" value="yes">
-        <label for="nine">9</label>
-        <input type="checkbox" name="ten" id="ten" value="yes">
-        <label for="ten">10</label><br>
-        </h1>
+        <label for="four">Thalamus</label>
         <br>
-
-        {% load static %}
-        <img src="{% static 'images/brain.png' %}" alt="MRI image" width="500" height="400"><br>
+        <br>
+        <input type="checkbox" name="five" id="five" value="yes">
+        <label for="five">Hypothalamu</label>
+        <br>
+        <br>
+        <input type="checkbox" name="six" id="six" value="yes">
+        <label for="six">Hippocampu</label>
+        <br>
+        <br>
+        <input type="checkbox" name="seven" id="seven" value="yes">
+        <label for="seven">Amygdala</label>
+        
+        <br>
         <br>
         <button type="submit">Submit</button>
       </form>     

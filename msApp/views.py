@@ -67,8 +67,8 @@ def page3(request):
             checkbox_value = request.POST['three']
             if checkbox_value == 'yes':
                 return render(request, 'page3.html', {'Suggestion' : Suggestion})
-        if 'four' in request.POST:
-            checkbox_value = request.POST['four']
+        if 'six' in request.POST:
+            checkbox_value = request.POST['six']
             if checkbox_value == 'yes':
                 return render(request, 'page3.html', {'Suggestion' : Suggestion})
         else:
