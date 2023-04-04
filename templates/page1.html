@@ -5,8 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewprt" content="width=device-width, initial-scale=1.0">
     <title> Diagnose MS Application</title>
+    <style>
+  
+      body {
+        text-align: center;
+        font-family: Calibri, sans-serif;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    </style>
 </head>
 <body>
+
+  <div class= 'c'>
+    <p><h1>Multiple Sclerosis</h1></p>
+    <br>
+    <br>
+  </div>
   <div class="outer">
     <div class="outer1">
       <form id="form-data"> 
@@ -14,45 +30,60 @@
     <label for="First Name input" class="form-label mb-1">First Name</label>
     <input type="text" class="form-control" name="First Name">
   </div>
+  <br>
   <div class="mb-3">
     <label for="Last Name input" class="form-label">Last Name</label>
     <input type="text" class="form-control" id="Last Name">
   </div>
+  <br>
   <div class="mb-3">
-    <label for="E-mail input" class="form-label">E-mail</label>
+    <label for="E-mail input" class="form-label">Phon Number</label>
     <input type="email" class="form-control" id="Last Name">
   </div>
+  <br>
   <div class="input-box">
     <span class="details">Date of the test</span>
     <input type="date" name="date" min="2021-01-01" max="2023-12-31" required>
   </div>
+  <br>
       </form>
-    Which of the following symptoms have you experienced during the past month?
+    <h1>Which of the following symptoms have you experienced during the past month?</h1>
     
-    <form method="POST", action="{% url 'page1' %}">
+    <form method="POST", action="{% url 'page1' %}"><br>
         <input type="checkbox" name="vision" id="vision" value="yes">
         <label for="vision">Blurred Vision</label><br>
+        <br>
         <input type="checkbox" name="weakness" id="weakness" value="yes">
         <label for="Weakness">Weakness</label><br>
+        <br>
         <input type="checkbox" name="bladder" id="bladder" value="yes">
         <label for="bladder">Bladder or Bowel Problems</label><br>
+        <br>
         <input type="checkbox" name="numbness" id="numbness" value="yes">
         <label for="numbness">Numbness or Tingling</label><br>
+        <br>
         <input type="checkbox" name="pain" id="pain" value="yes">
         <label for="pain">Pain</label><br>
+        <br>
         <input type="checkbox" name="illness" id="illness" value="yes">
         <label for="illness">Recent Illness</label><br>
+        <br>
         <input type="checkbox" name="weight" id="weight" value="yes">
         <label for="weight">Weight Loss</label><br>
+        <br>
         <input type="checkbox" name="drug" id="drug" value="yes">
         <label for="drug">Start Medication or Drug</label><br>
-        <button type="submit">Test Result:</button>
+        <br>
+        <button type="submit">Test Result</button>
       </form>  
       <form>
         <h1>Result</h1>
         <h1> {{Suggestion}}</h1>
-
       </form>   
+      <br>
+      <form action="{% url 'page2' %}">
+        <button type="submit">Next Step</button>
+      </form>
 
 </body>
 </html>

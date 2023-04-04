@@ -26,13 +26,13 @@ def page1(request):
             if checkbox_value == 'yes':
                 return render(request, 'page1.html', {'Suggestion' : Suggestion})
         else:
-            return render(request, 'page2.html')
+            Suggestion = 'You need to do physical tests at a medical center and then press the button below to continue the process'
+            return render(request, 'page1.html', {'Suggestion' : Suggestion})
     return render(request, 'page1.html')
      
 @csrf_exempt 
 def page2(request):
     if request.method == 'POST': 
-        Suggestion = 'You are not suffering from MS. It is suggested that visit a neurologist for further examination.'  
         Pyramidal = request.POST['Pyramidal']
         Cerebellar = request.POST['Cerebellar']
         Brainstem = request.POST['Brainstem']
@@ -43,9 +43,11 @@ def page2(request):
         walk = request.POST['walk']
         Y_pred = model.predict([[Pyramidal, Cerebellar, Brainstem, Sensory, Bowel, Visual, Mental, walk]])
         if Y_pred[0] == 0:
-           return render(request, 'page2.html', {'Suggestion' : Suggestion})
+            Suggestion = 'You are not suffering from MS. It is suggested that visit a neurologist for further examination.'  
+            return render(request, 'page2.html', {'Suggestion' : Suggestion})
         else:
-            return render(request, 'page3.html')
+            Suggestion = 'You need to take an MRI image at a medical center and then press the button below to continue the process'
+            return render(request, 'page2.html', {'Suggestion' : Suggestion})
     return render(request, 'page2.html')
 
 @csrf_exempt 

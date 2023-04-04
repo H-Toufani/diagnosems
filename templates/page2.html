@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewprt" content="width=device-width, initial-scale=1.0">
     <title> Diagnose MS Application</title>
+    <style>
+  
+      body {
+        text-align: center;
+        font-family: Calibri, sans-serif;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    </style>
 </head>
 <body>
+  <div class= 'c'>
+    <p><h1>Multiple Sclerosis</h1></p>
+    <br>
+    <br>
+  </div>
     <h1> Please enter the results of your Physical Tests</h1>
     
     <form method="post", action="{% url 'page2' %}">
@@ -66,13 +81,14 @@
         <input type="radio" id="Severe" name="Mental" value='1'>
         <label for="Severe">Severe impairment</label><br>
 
-        <p>8. Do you have difficulty walking? Do you require assistance, such as a walker?</p>
+        <p>8.  Walk with difficulty?</p>
         <input type="radio" id="Normal" name="walk" value='0' required>
         <label for="Normal">No</label><br>
         <input type="radio" id="Moderate" name="walk" value='1'>
         <label for="Moderate">Yes</label><br>
+        <br>
         <button type="submit">Submit</button>
-      </form>     
+   
 
     </form>     
 
@@ -81,5 +97,9 @@
         <h1> {{Suggestion}}</h1>
 
       </form>   
+      <br>
+      <form action="{% url 'page3' %}">
+        <button type="submit">Next Step</button>
+      </form>
 </body>
 </html>

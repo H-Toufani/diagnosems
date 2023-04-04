@@ -5,14 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewprt" content="width=device-width, initial-scale=1.0">
     <title> Diagnose MS Application</title>
+    <style>
+  
+      body {
+        text-align: center;
+        font-family: Calibri, sans-serif;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    </style>
 </head>
 {% load static %}
 <body>
+  <div class= 'c'>
+    <p><h1>Multiple Sclerosis</h1></p>
+    <br>
+    <br>
+  </div>
     <form method="post", action="{% url 'page3' %}">
         <p>1. How many lesions are there in your brain MRI image?
             <input type="number" name="Number" required><br></p>
         
         <p>2. Identify the location of the lesions in your brain MRI image using the image below.<br></p>
+        <h1>
         <input type="checkbox" name="one" id="one" value="yes">
         <label for="one">1</label>
         <input type="checkbox" name="two" id="two" value="yes">
@@ -33,10 +49,12 @@
         <label for="nine">9</label>
         <input type="checkbox" name="ten" id="ten" value="yes">
         <label for="ten">10</label><br>
+        </h1>
+        <br>
 
         {% load static %}
         <img src="{% static 'images/brain.png' %}" alt="MRI image" width="500" height="400"><br>
-        
+        <br>
         <button type="submit">Submit</button>
       </form>     
 
